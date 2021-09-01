@@ -1,8 +1,10 @@
-import idrBanner from './idrBanner/index.vue'
-import idrInput from './idrInput/index.vue'
-
+import Vue from 'vue'
+import ElementUI from 'element-ui'
+import idrSuggest from './idrSuggest/suggest.vue'
+import 'element-ui/lib/theme-chalk/index.css'
+Vue.use(ElementUI)
 const components = [
-  idrBanner,idrInput
+  idrSuggest
 ]
 const install = function(Vue, opts = {}) {
   components.forEach(component => {
@@ -14,6 +16,5 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 export {
   install,
-  idrBanner,
-  idrInput
+  idrSuggest
 }
